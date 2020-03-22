@@ -11,10 +11,8 @@ class items:
 itemCatalog = [] 
 
 with open("itemList.txt") as f:
-	x=1
 	for line in f:
-		itemCatalog[x] = line
-		x = x + 1
+		itemCatalog.append(line)
 
 
 
