@@ -12,7 +12,14 @@ itemCatalog = []
 
 with open("itemList.txt") as f:
 	for line in f:
-		itemCatalog.append(line)
+		line = line.replace("\n","")
+		itemCatalog.append(line.split(','))
+
+
+itemClassCatalog = []
+for x in range(0,len(itemCatalog)):
+	for y in range(1,2):
+		itemClassCatalog.append(itemCatalog[x][y])
 
 
 
